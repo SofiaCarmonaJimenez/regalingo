@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres abrir este regalo?</title>
+  <style>
+    body {
+      background-color: #fef3c7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #regalo {
+      width: 200px;
+      transition: transform 0.5s ease;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .si {
+      background-color: #34d399;
+      color: white;
+    }
+
+    .no {
+      background-color: #ef4444;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #mensajeFinal {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Quieres abrir este regalo?</h1>
+  <img id="regalo" src="https://png.pngtree.com/recommend-works/png-clipart/20250415/ourmid/pngtree-gift-box-red-gift-box-yellow-ribbon-png-image_16021390.png" alt="Regalo cerrado">
+  
+  <div>
+    <button class="si" onclick="abrirRegalo()">Sí </button>
+    <button class="no" onclick="quemarRegalo()">No </button>
+  </div>
+
+  <p id="mensajeFinal"></p>
+
+  <script>
+    function abrirRegalo() {
+      document.getElementById("regalo").src = "https://www.vice.com/wp-content/uploads/sites/2/2019/06/1560770517232-2019-06-17.jpeg"; // Imagen de regalo abierto
+      document.getElementById("mensajeFinal").innerText = "jejeje grasias moreno ;)";
+    }
+
+    function quemarRegalo() {
+      document.getElementById("regalo").src = "https://ih1.redbubble.net/image.5450805949.7834/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"; // Imagen de regalo quemado
+      document.getElementById("mensajeFinal").innerText = "porque no quieres abrir mi regalo ;(";
+    }
+  </script>
+
+</body>
+</html>
